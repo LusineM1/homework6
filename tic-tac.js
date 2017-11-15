@@ -207,7 +207,9 @@ canvas.addEventListener('click', function(e){
 	isX=!isX;
 	update(isX);
 	isX=!isX;
-	if(findWinner(board)){
+	if(fi+ndWinner(board)){
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		 drawBorders(5, 'black');
 		alert('the winner is   ' + findWinner(board).winner + ',  winning location is     ' + findWinner(board).winningLocations)
 	}
 })
